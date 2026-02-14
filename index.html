@@ -1,108 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Souvik Roy | System & Backend Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Souvik Roy | System & Backend Engineer</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
+<nav>
+    <div class="logo">Souvik Roy</div>
+    <div class="nav-right">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+    </div>
+</nav>
+
 <header>
     <h1>Souvik Roy</h1>
-    <p>B.Tech Computer Science & Engineering</p>
-    <p>System Programming | Backend Development | Linux Environment</p>
-    <a href="#projects" class="btn">Explore My Work</a>
+    <h2><span id="typing"></span></h2>
+
+    <div class="header-buttons">
+        <a href="CV_SR_editversion.pdf" download class="btn">Download Resume</a>
+        <div class="social-icons">
+            <a href="https://github.com/Souvik292002" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/souvik-roy-103077230" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
 </header>
 
 <section id="about">
     <h2>Professional Summary</h2>
     <p>
-        Computer Science graduate with strong expertise in Linux-based system programming,
-        concurrent architecture design, and backend development. Experienced in building
-        multi-threaded TCP/IP applications, secure communication systems, and
-        database-driven web applications.
+        Linux-focused System Programmer with hands-on experience in multi-threaded
+        TCP/IP architectures, POSIX threads, and concurrent backend systems.
+        Trained under Wipro Elite Exclusive in industry-level Linux system programming practices.
     </p>
 </section>
 
-<section id="education">
-    <h2>Education</h2>
-    <p><strong>B.Tech – Computer Science & Engineering</strong><br>
-    University of Engineering & Management, Kolkata (2021–2025)<br>
-    CGPA: 8.3</p>
-
-    <p><strong>Higher Secondary (WBCHSE)</strong> – 82% (2021)</p>
-    <p><strong>Secondary (WBBSE)</strong> – 84% (2019)</p>
-</section>
-
-<section id="skills">
-    <h2>Technical Skills</h2>
-
-    <h3>Programming Languages</h3>
-    <ul>
-        <li>C++ (C++17)</li>
-        <li>Java</li>
-        <li>JavaScript</li>
-    </ul>
-
-    <h3>System Programming & OS</h3>
-    <ul>
-        <li>Linux Environment</li>
-        <li>POSIX Threads</li>
-        <li>TCP/IP Socket Programming</li>
-        <li>Process & File Handling</li>
-        <li>Mutex & Synchronization</li>
-    </ul>
-
-    <h3>Web & Database</h3>
-    <ul>
-        <li>HTML & CSS</li>
-        <li>Servlets</li>
-        <li>JDBC</li>
-        <li>MySQL</li>
-    </ul>
-
-    <h3>Version Control</h3>
-    <ul>
-        <li>Git & GitHub</li>
-    </ul>
+<section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="card">
+        <h3>Wipro Elite Exclusive – Pre-Employment Training Program</h3>
+        <span>Linux System Programming Domain | Dec 2025 – Feb 2026</span>
+        <p>
+            Completed domain-focused training covering POSIX threads, process management,
+            TCP/IP sockets, synchronization, file handling, C++ fundamentals,
+            and industry-level software development practices.
+        </p>
+    </div>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Enterprise Concurrent Signal Broadcast Framework (2026)</h3>
+    <div class="card">
+        <h3>Enterprise Concurrent Signal Broadcast Framework</h3>
         <p>
-            Developed a multi-threaded TCP/IP server-client framework in a Linux
-            environment using POSIX sockets. Implemented secure session-based
-            communication and real-time signal broadcasting.
+            Multi-threaded TCP/IP server-client framework built in Linux using
+            POSIX sockets. Implemented secure session-based communication,
+            encrypted messaging, concurrency control, and centralized logging.
         </p>
+
+        <!-- GitHub Button (ONLY Project 1) -->
+        <a href="https://github.com/Souvik292002/ECSBF.git"
+           target="_blank"
+           class="project-btn">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>Movie Ticket Management System</h3>
         <p>
-            Engineered thread-safe concurrency using std::thread, mutex synchronization,
-            and low-level socket APIs (socket, bind, listen, accept, recv, send).
-            Integrated encrypted messaging, centralized logging, and session lifecycle management.
+            Full-stack Java web application with authentication, booking management,
+            and admin controls using Servlets, JDBC, and MySQL.
         </p>
     </div>
 
-    <div class="project">
-        <h3>Movie Ticket Management System (2025)</h3>
+    <div class="card">
+        <h3>Student Registration System</h3>
         <p>
-            Developed a database-driven web application with user authentication,
-            movie listing, ticket booking, and booking history management.
-        </p>
-        <p>
-            Implemented admin panel for managing show timings, pricing, and seating
-            configurations using Java, Servlets, JDBC, and MySQL.
-        </p>
-    </div>
-
-    <div class="project">
-        <h3>Student Registration System (2024)</h3>
-        <p>
-            Built a Java-based CRUD application using JDBC and MySQL for student
-            data management. Designed front-end using HTML/CSS and integrated
-            backend logic using Servlets.
+            CRUD-based student management system using Java, JDBC, Servlets,
+            and MySQL database integration.
         </p>
     </div>
 
@@ -113,12 +100,10 @@
     <p>Email: mr.souvik10@gmail.com</p>
     <p>Phone: +91-6289697623</p>
     <p>Location: West Bengal, India</p>
-    <p>Languages: English | Hindi | Bengali</p>
-    <p>GitHub: https://github.com/Souvik292002</p>
 </section>
 
 <footer>
-    <p>© 2026 Souvik Roy | Backend & System Developer</p>
+    © 2026 Souvik Roy | Linux & Backend Engineer
 </footer>
 
 <script src="script.js"></script>
