@@ -748,45 +748,85 @@ footer {
 
 @media(max-width: 768px) {
 
-    /* ===== NAVBAR ===== */
+    /* ===== MOBILE NAVBAR FIXED ===== */
+
+    nav {
+
+        overflow: hidden;
+    }
 
     .nav-container {
 
-        justify-content: flex-start;
+        padding: 14px 18px;
 
-        padding: 16px 18px 16px 18px;
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        position: relative;
     }
 
     .nav-links {
 
-        gap: 22px;
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 20px;
+
+        width: 100%;
 
         padding-right: 90px;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-links::-webkit-scrollbar {
+
+        display: none;
     }
 
     .nav-links a {
 
-        font-size: 0.95rem;
+        font-size: 0.92rem;
 
         white-space: nowrap;
+
+        flex-shrink: 0;
     }
+
+    /* ===== THEME TOGGLE ===== */
 
     #theme-toggle {
 
-        position: fixed;
+        position: absolute;
 
-        top: 14px;
+        top: 50%;
 
         right: 14px;
 
-        width: 54px;
+        transform: translateY(-50%);
 
-        height: 54px;
+        width: 52px;
+
+        height: 52px;
+
+        min-width: 52px;
 
         z-index: 1200;
 
+        border-radius: 50%;
+
         box-shadow:
-            0 8px 25px rgba(0,0,0,0.22);
+            0 8px 24px rgba(0,0,0,0.18);
     }
 
     /* ===== HERO ===== */
@@ -894,6 +934,8 @@ footer {
         margin-top: 34px;
 
         gap: 14px;
+
+        flex-wrap: wrap;
     }
 
     .primary-btn,
