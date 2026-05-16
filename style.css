@@ -1,20 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
+
     --bg: #0b1120;
-    --card: #111827;
-    --border: #1f2937;
+    --card: rgba(17, 24, 39, 0.82);
+    --border: rgba(255,255,255,0.05);
+
     --text: #f8fafc;
     --muted: #94a3b8;
+
     --accent: #38bdf8;
 }
 
+/* ================= LIGHT MODE ================= */
+
 body.light {
-    --bg: #ffffff;
-    --card: #f3f4f6;
-    --border: #d1d5db;
-    --text: #111827;
-    --muted: #4b5563;
+
+    --bg: #f4f7fb;
+    --card: rgba(255, 255, 255, 0.88);
+    --border: rgba(15, 23, 42, 0.08);
+
+    --text: #0f172a;
+    --muted: #475569;
+
+    --accent: #0ea5e9;
 }
 
 * {
@@ -28,19 +37,29 @@ html {
 }
 
 body {
+
     font-family: 'Inter', sans-serif;
+
     background: var(--bg);
+
     color: var(--text);
-    transition: 0.3s ease;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease;
+
     line-height: 1.7;
 }
 
 /* ================= NAVBAR ================= */
 
 nav {
+
     position: fixed;
+
     width: 100%;
     top: 0;
+
     z-index: 1000;
 
     display: flex;
@@ -50,27 +69,45 @@ nav {
     padding: 22px 10%;
 
     background: rgba(11, 17, 32, 0.82);
-    backdrop-filter: blur(12px);
+
+    backdrop-filter: blur(14px);
 
     border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    transition: 0.35s ease;
+}
+
+body.light nav {
+
+    background: rgba(255,255,255,0.82);
+
+    border-bottom: 1px solid rgba(15,23,42,0.06);
 }
 
 .logo {
+
     font-size: 1.2rem;
     font-weight: 700;
+
     letter-spacing: 1px;
 }
 
 .nav-links {
+
     display: flex;
     align-items: center;
+
     gap: 28px;
 }
 
 .nav-links a {
+
     text-decoration: none;
+
     color: var(--text);
+
     font-weight: 500;
+
     transition: 0.3s ease;
 }
 
@@ -78,28 +115,39 @@ nav {
     color: var(--accent);
 }
 
+/* ================= TOGGLE ================= */
+
 #theme-toggle {
+
     background: rgba(255,255,255,0.04);
+
     border: 1px solid rgba(255,255,255,0.06);
+
     color: var(--text);
 
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
 
     border-radius: 50%;
+
     cursor: pointer;
 
     transition: 0.3s ease;
 }
 
 #theme-toggle:hover {
+
     background: var(--accent);
+
     color: #fff;
+
+    transform: rotate(12deg);
 }
 
 /* ================= HERO ================= */
 
 header {
+
     min-height: 100vh;
 
     display: flex;
@@ -121,9 +169,30 @@ header {
     background-repeat: no-repeat;
 
     position: relative;
+
+    transition: 0.4s ease;
+}
+
+/* ===== LIGHT MODE HERO ===== */
+
+body.light header {
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(255,255,255,0.92) 12%,
+            rgba(255,255,255,0.76) 42%,
+            rgba(255,255,255,0.10) 100%
+        ),
+        url('banner.jpg');
+
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
 }
 
 .hero-text {
+
     max-width: 760px;
 
     padding-top: 40px;
@@ -132,16 +201,24 @@ header {
 }
 
 .tag {
+
     color: var(--accent);
+
     font-size: 0.95rem;
+
     margin-bottom: 18px;
+
     letter-spacing: 1.5px;
+
     font-weight: 500;
 }
 
 header h1 {
+
     font-size: 5rem;
+
     line-height: 1.05;
+
     font-weight: 700;
 
     text-shadow:
@@ -149,32 +226,49 @@ header h1 {
 }
 
 header h2 {
+
     margin-top: 18px;
+
     color: var(--accent);
+
     font-size: 1.7rem;
+
     height: 45px;
+
     font-weight: 600;
 }
 
 .hero-summary {
+
     margin-top: 30px;
 
-    color: rgba(226,232,240,0.82);
+    color: rgba(226,232,240,0.84);
 
     font-size: 1.08rem;
 
     max-width: 720px;
 }
 
+/* ===== LIGHT MODE HERO TEXT ===== */
+
+body.light .hero-summary {
+    color: #334155;
+}
+
+/* ================= HERO BUTTONS ================= */
+
 .hero-buttons {
+
     margin-top: 42px;
 
     display: flex;
+
     gap: 18px;
 }
 
 .primary-btn,
 .secondary-btn {
+
     padding: 14px 28px;
 
     border-radius: 12px;
@@ -187,7 +281,9 @@ header h2 {
 }
 
 .primary-btn {
+
     background: var(--accent);
+
     color: #fff;
 
     box-shadow:
@@ -195,37 +291,62 @@ header h2 {
 }
 
 .primary-btn:hover {
+
     transform: translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.32);
 }
 
 .secondary-btn {
+
     border: 1px solid rgba(255,255,255,0.08);
+
     color: var(--text);
 
     background: rgba(255,255,255,0.02);
 }
 
 .secondary-btn:hover {
+
     border-color: var(--accent);
+
     color: var(--accent);
 }
 
+body.light .secondary-btn {
+
+    background: rgba(255,255,255,0.75);
+
+    border: 1px solid rgba(15,23,42,0.08);
+}
+
+/* ================= SOCIAL ================= */
+
 .social-icons {
+
     margin-top: 38px;
 
     display: flex;
+
     gap: 20px;
 }
 
 .social-icons a {
-    color: rgba(255,255,255,0.75);
+
+    color: rgba(255,255,255,0.78);
 
     font-size: 1.7rem;
 
     transition: 0.3s ease;
 }
 
+body.light .social-icons a {
+    color: #334155;
+}
+
 .social-icons a:hover {
+
     color: var(--accent);
 
     transform: translateY(-2px);
@@ -238,7 +359,9 @@ section {
 }
 
 section h2 {
+
     font-size: 2.2rem;
+
     margin-bottom: 45px;
 }
 
@@ -248,21 +371,32 @@ section h2 {
 .about-card,
 .contact-card,
 .skill-card {
-    background: rgba(17, 24, 39, 0.82);
 
-    border: 1px solid rgba(255,255,255,0.05);
+    background: var(--card);
+
+    border: 1px solid var(--border);
 
     border-radius: 18px;
 
     padding: 30px;
 
-    transition: 0.3s ease;
+    transition: 0.35s ease;
 
     backdrop-filter: blur(10px);
 }
 
+body.light .card,
+body.light .about-card,
+body.light .contact-card,
+body.light .skill-card {
+
+    box-shadow:
+        0 8px 30px rgba(15,23,42,0.04);
+}
+
 .card:hover,
 .skill-card:hover {
+
     transform: translateY(-5px);
 
     border-color: rgba(56, 189, 248, 0.35);
@@ -276,19 +410,25 @@ section h2 {
 }
 
 .card-top {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     gap: 20px;
 }
 
 .card-top span {
+
     color: var(--muted);
+
     font-size: 0.92rem;
 }
 
 .card h4 {
+
     margin-top: 6px;
 
     color: var(--accent);
@@ -297,18 +437,27 @@ section h2 {
 }
 
 .card ul {
+
     margin-top: 18px;
+
     padding-left: 20px;
 }
 
 .card li {
+
     margin-bottom: 12px;
+
     color: rgba(226,232,240,0.78);
+}
+
+body.light .card li {
+    color: #334155;
 }
 
 /* ================= SKILLS ================= */
 
 .skills-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -322,14 +471,22 @@ section h2 {
 }
 
 .skill-card p {
+
     color: rgba(226,232,240,0.78);
+}
+
+body.light .skill-card p {
+    color: #334155;
 }
 
 /* ================= PROJECT BUTTON ================= */
 
 .project-btn {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 8px;
 
     margin-top: 22px;
@@ -348,7 +505,9 @@ section h2 {
 }
 
 .project-btn:hover {
+
     background: var(--accent);
+
     color: #fff;
 
     box-shadow:
@@ -358,19 +517,27 @@ section h2 {
 /* ================= CONTACT ================= */
 
 .contact-card p {
+
     margin-bottom: 15px;
 
     color: rgba(226,232,240,0.78);
 }
 
+body.light .contact-card p {
+    color: #334155;
+}
+
 .contact-card i {
+
     margin-right: 10px;
+
     color: var(--accent);
 }
 
 /* ================= FOOTER ================= */
 
 footer {
+
     text-align: center;
 
     padding: 35px;
@@ -380,17 +547,21 @@ footer {
     color: var(--muted);
 }
 
-/* ================= ANIMATIONS ================= */
+/* ================= ANIMATION ================= */
 
 @keyframes fadeUp {
 
     from {
+
         opacity: 0;
+
         transform: translateY(35px);
     }
 
     to {
+
         opacity: 1;
+
         transform: translateY(0);
     }
 }
@@ -404,11 +575,14 @@ footer {
     }
 
     .nav-links {
+
         gap: 15px;
+
         font-size: 0.9rem;
     }
 
     header {
+
         padding: 0 6%;
 
         background-position: 70% center;
@@ -431,7 +605,9 @@ footer {
     }
 
     .card-top {
+
         flex-direction: column;
+
         align-items: flex-start;
     }
 
