@@ -1,40 +1,44 @@
-// Typing animation
 const roles = [
-    "System Programmer",
-    "Backend Developer",
-    "Linux Environment Specialist",
-    "C++ & TCP/IP Engineer"
+    "Software/Firmware Engineer",
+    "Linux System Programmer",
+    "Backend Systems Engineer",
+    "C++ & TCP/IP Developer"
 ];
 
 let index = 0;
 let charIndex = 0;
-let currentRole = "";
-let isDeleting = false;
+let currentText = "";
+let deleting = false;
 
-function type() {
-    const typingElement = document.getElementById("typing");
+function typeEffect() {
 
-    if (!isDeleting && charIndex <= roles[index].length) {
-        currentRole = roles[index].substring(0, charIndex++);
-    } else if (isDeleting && charIndex >= 0) {
-        currentRole = roles[index].substring(0, charIndex--);
+    const typing = document.getElementById("typing");
+
+    if (!deleting) {
+        currentText = roles[index].substring(0, charIndex++);
+    } else {
+        currentText = roles[index].substring(0, charIndex--);
     }
 
-    typingElement.textContent = currentRole;
+    typing.textContent = currentText;
 
-    if (!isDeleting && charIndex === roles[index].length) {
-        setTimeout(() => isDeleting = true, 1000);
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
+    if (!deleting && charIndex === roles[index].length + 1) {
+        deleting = true;
+
+        setTimeout(typeEffect, 1200);
+        return;
+    }
+
+    if (deleting && charIndex === 0) {
+        deleting = false;
         index = (index + 1) % roles.length;
     }
 
-    setTimeout(type, isDeleting ? 50 : 100);
+    setTimeout(typeEffect, deleting ? 40 : 90);
 }
 
-type();
+typeEffect();
 
-// Theme toggle
 const toggle = document.getElementById("theme-toggle");
 
 toggle.addEventListener("click", () => {
