@@ -71,14 +71,6 @@ nav {
 
     z-index: 1000;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 20px 8%;
-
     background: rgba(7,15,31,0.72);
 
     backdrop-filter: blur(18px);
@@ -95,13 +87,34 @@ body.light nav {
     border-bottom: 1px solid rgba(15,23,42,0.06);
 }
 
+/* ===== NAV CONTAINER ===== */
+
+.nav-container {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 18px 8%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+}
+
+/* ===== NAV LINKS ===== */
+
 .nav-links {
 
     display: flex;
 
     align-items: center;
 
-    gap: 42px;
+    gap: 44px;
 }
 
 .nav-links a {
@@ -147,7 +160,7 @@ body.light nav {
     width: 100%;
 }
 
-/* ================= THEME TOGGLE ================= */
+/* ===== THEME TOGGLE ===== */
 
 #theme-toggle {
 
@@ -194,7 +207,7 @@ header {
 
     align-items: center;
 
-    padding: 0 10%;
+    padding: 90px 10% 0;
 
     background:
         linear-gradient(
@@ -233,8 +246,6 @@ body.light header {
 .hero-text {
 
     max-width: 760px;
-
-    padding-top: 40px;
 
     animation: fadeUp 1s ease;
 }
@@ -439,7 +450,7 @@ section h2 {
     letter-spacing: -1px;
 }
 
-/* ================= PREMIUM GLASS CARDS ================= */
+/* ================= CARDS ================= */
 
 .card,
 .contact-card,
@@ -525,35 +536,6 @@ body.light .contact-card:hover {
         0 0 0 1px rgba(14,165,233,0.08);
 }
 
-/* ================= CURSOR GLOW ================= */
-
-.card::after,
-.skill-card::after {
-
-    content: '';
-
-    position: absolute;
-
-    inset: 0;
-
-    border-radius: inherit;
-
-    opacity: 0;
-
-    transition: 0.35s ease;
-
-    pointer-events: none;
-
-    box-shadow:
-        inset 0 0 40px rgba(56,189,248,0.08);
-}
-
-.card:hover::after,
-.skill-card:hover::after {
-
-    opacity: 1;
-}
-
 /* ================= EXPERIENCE ================= */
 
 .card {
@@ -635,8 +617,6 @@ body.light .card li {
 .skill-card {
 
     position: relative;
-
-    overflow: hidden;
 }
 
 .skill-card::before {
@@ -780,43 +760,39 @@ footer {
 
 @media(max-width: 768px) {
 
-    nav {
+    /* ===== NAVBAR ===== */
 
-        justify-content: center;
+    .nav-container {
 
         padding: 16px 5%;
 
-        height: 74px;
+        justify-content: center;
     }
 
     .nav-links {
 
         gap: 18px;
-
-        flex-wrap: nowrap;
     }
 
     .nav-links a {
 
-        font-size: 0.78rem;
+        font-size: 0.88rem;
 
         white-space: nowrap;
     }
 
     #theme-toggle {
 
-        position: absolute;
-
         right: 5%;
 
-        width: 42px;
+        width: 44px;
 
-        height: 42px;
+        height: 44px;
 
-        min-width: 42px;
+        min-width: 44px;
     }
 
-    /* ================= HERO ================= */
+    /* ===== HERO ===== */
 
     header {
 
@@ -860,8 +836,6 @@ footer {
     .hero-text {
 
         max-width: 100%;
-
-        padding-top: 0;
     }
 
     .tag {
@@ -929,7 +903,7 @@ footer {
         font-size: 1.9rem;
     }
 
-    /* ================= SECTIONS ================= */
+    /* ===== SECTIONS ===== */
 
     section {
 
@@ -943,7 +917,7 @@ footer {
         margin-bottom: 40px;
     }
 
-    /* ================= CARDS ================= */
+    /* ===== CARDS ===== */
 
     .card,
     .skill-card,
@@ -980,7 +954,7 @@ footer {
         gap: 12px;
     }
 
-    /* ================= SKILLS ================= */
+    /* ===== SKILLS ===== */
 
     .skills-grid {
 
@@ -999,7 +973,7 @@ footer {
         font-size: 0.98rem;
     }
 
-    /* ================= PROJECT BUTTON ================= */
+    /* ===== PROJECT BUTTON ===== */
 
     .project-btn {
 
@@ -1010,7 +984,7 @@ footer {
         font-size: 0.95rem;
     }
 
-    /* ================= FOOTER ================= */
+    /* ===== FOOTER ===== */
 
     footer {
 
