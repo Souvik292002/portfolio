@@ -2,44 +2,56 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Souvik Roy | Software/Firmware Engineer</title>
 
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
 
     <nav>
-        <div class="logo">SR.</div>
 
         <div class="nav-links">
+
             <a href="#about">About</a>
+
             <a href="#experience">Experience</a>
+
             <a href="#skills">Skills</a>
+
             <a href="#projects">Projects</a>
+
             <a href="#contact">Contact</a>
 
-            <button id="theme-toggle">
-                <i class="fa-solid fa-moon"></i>
-            </button>
         </div>
+
+        <button id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
     </nav>
 
-    <!-- HERO -->
+    <!-- ================= HERO ================= -->
 
-    <header>
+    <header id="about">
 
         <div class="hero-text">
 
-            <p class="tag">FLASH R&D · Firmware · Systems Engineering</p>
+            <p class="tag">
+                FLASH R&D • Firmware • Systems Engineering
+            </p>
 
             <h1>Souvik Roy</h1>
 
@@ -48,81 +60,93 @@
             </h2>
 
             <p class="hero-summary">
-                Software/Firmware Engineer contributing to Flash R&D engineering
-                workflows at Marvell Technology(Contingent), with exposure to Linux system
-                programming, storage technologies, and low-level systems development.
+
+                I specialize in Linux system programming, concurrent systems,
+                TCP/IP-based architectures, and backend-focused software engineering,
+                with a growing focus on low-level systems, firmware engineering,
+                storage technologies, and scalable performance-oriented architectures.
+
+                My experience includes working with POSIX threads, socket programming,
+                multithreading, synchronization mechanisms, and Linux-based development
+                workflows using C/C++, along with exposure to firmware validation,
+                system-level debugging, and semiconductor-oriented engineering workflows.
+
             </p>
+
+            <!-- ================= BUTTONS ================= -->
 
             <div class="hero-buttons">
 
                 <a href="CV_SR.pdf" download class="primary-btn">
+
                     <i class="fa-solid fa-download"></i>
                     Resume
+
                 </a>
 
                 <a href="#contact" class="secondary-btn">
+
                     Contact
+
                 </a>
 
             </div>
 
+            <!-- ================= SOCIAL ================= -->
+
             <div class="social-icons">
-                <a href="https://github.com/Souvik292002" target="_blank">
+
+                <a href="https://github.com/Souvik292002"
+                    target="_blank">
+
                     <i class="fab fa-github"></i>
+
                 </a>
 
                 <a href="https://www.linkedin.com/in/souvik-roy-103077230"
                     target="_blank">
+
                     <i class="fab fa-linkedin"></i>
+
                 </a>
+
             </div>
 
         </div>
 
     </header>
 
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <h2>About</h2>
-
-        <div class="about-card">
-
-            <p>
-                I specialize in Linux system programming, concurrent systems,
-    TCP/IP-based architectures, and backend-focused software engineering,
-    with a growing focus on low-level systems, firmware engineering,
-    storage technologies, and scalable performance-oriented architectures.
-            </p>
-
-            <p>
-                My experience includes working with POSIX threads, socket programming,
-    multithreading, synchronization mechanisms, and Linux-based development
-    workflows using C/C++, along with exposure to firmware validation,
-    system-level debugging, and semiconductor-oriented engineering workflows.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- EXPERIENCE -->
+    <!-- ================= EXPERIENCE ================= -->
 
     <section id="experience">
 
         <h2>Professional Experience</h2>
 
+        <!-- CARD 1 -->
+
         <div class="card">
 
             <div class="card-top">
-                <h3>Software/Firmware Engineer</h3>
-                <span>Mar 2025 – Present</span>
+
+                <div>
+
+                    <h3>Software/Firmware Engineer</h3>
+
+                    <h4>
+                        Marvell Technology
+                        (Contingent via Wipro)
+                    </h4>
+
+                </div>
+
+                <span>
+                    Mar 2026 – Present
+                </span>
+
             </div>
 
-            <h4>Marvell Technology (Contingent via Wipro)</h4>
-
             <ul>
+
                 <li>
                     Contributing to Flash R&D engineering workflows related to
                     storage and firmware development.
@@ -137,20 +161,33 @@
                     Gaining exposure to NVMe, PCIe, NAND Flash technologies,
                     and embedded firmware development concepts.
                 </li>
+
             </ul>
 
         </div>
 
+        <!-- CARD 2 -->
+
         <div class="card">
 
             <div class="card-top">
-                <h3>Project Engineer</h3>
-                <span>Feb 2025 – Present</span>
+
+                <div>
+
+                    <h3>Project Engineer</h3>
+
+                    <h4>Wipro Limited</h4>
+
+                </div>
+
+                <span>
+                    Feb 2026 – Present
+                </span>
+
             </div>
 
-            <h4>Wipro Limited</h4>
-
             <ul>
+
                 <li>
                     Completed intensive Linux System Programming training covering
                     POSIX threads, process management, synchronization,
@@ -161,13 +198,14 @@
                     Applied debugging and system-level problem-solving practices
                     within Linux environments using C/C++.
                 </li>
+
             </ul>
 
         </div>
 
     </section>
 
-    <!-- SKILLS -->
+    <!-- ================= SKILLS ================= -->
 
     <section id="skills">
 
@@ -176,80 +214,97 @@
         <div class="skills-grid">
 
             <div class="skill-card">
+
                 <h3>Languages</h3>
-                <p>C · C++ · Java · Java Script · CSS · HTML</p>
+
+                <p>
+                    C • C++ • Java
+                </p>
+
             </div>
 
             <div class="skill-card">
+
                 <h3>System Programming</h3>
-                <p>Linux · POSIX Threads · TCP/IP Sockets</p>
+
+                <p>
+                    Linux • POSIX Threads •
+                    TCP/IP Sockets
+                </p>
+
             </div>
 
             <div class="skill-card">
+
                 <h3>Firmware & Storage</h3>
-                <p>NVMe · PCIe · NAND Flash</p>
+
+                <p>
+                    NVMe • PCIe • NAND Flash
+                </p>
+
             </div>
 
             <div class="skill-card">
+
                 <h3>Tools</h3>
-                <p>Git · GitHub · MySQL</p>
+
+                <p>
+                    Git • GitHub • MySQL
+                </p>
+
             </div>
 
         </div>
 
     </section>
 
-    <!-- PROJECTS -->
+    <!-- ================= PROJECTS ================= -->
 
-   <section id="projects">
+    <section id="projects">
 
-    <h2>Featured Project</h2>
+        <h2>Projects</h2>
 
-    <div class="card">
+        <div class="card">
 
-        <div class="card-top">
-            <h3>Enterprise Concurrent Signal Broadcast Framework</h3>
-            <span>C++17 · Linux · TCP/IP · POSIX</span>
+            <h3>
+                Enterprise Concurrent Signal Broadcast Framework
+            </h3>
+
+            <h4>
+                Linux System Programming Project
+            </h4>
+
+            <ul>
+
+                <li>
+                    Built a multi-threaded TCP/IP server-client framework
+                    using POSIX sockets and C++.
+                </li>
+
+                <li>
+                    Implemented concurrency handling,
+                    encrypted communication,
+                    centralized logging,
+                    and secure session management.
+                </li>
+
+            </ul>
+
+            <a href="https://github.com/Souvik292002/ECSBF.git"
+                target="_blank"
+                class="project-btn">
+
+                <i class="fab fa-github"></i>
+
+                View on GitHub
+
+            </a>
+
         </div>
 
-        <p>
-            Architected a multi-threaded TCP/IP server-client framework
-            in Linux using POSIX sockets with secure session-based
-            communication, concurrency control, encrypted messaging,
-            and centralized logging mechanisms.
-        </p>
+    </section>
 
-        <ul>
-            <li>
-                Implemented thread-safe concurrency using std::thread,
-                mutex synchronization, and low-level socket APIs.
-            </li>
-
-            <li>
-                Built secure communication workflows with session lifecycle
-                management and process-level resource handling.
-            </li>
-
-            <li>
-                Designed scalable real-time broadcast handling
-                in Linux environments.
-            </li>
-        </ul>
-
-        <a href="https://github.com/Souvik292002/ECSBF.git"
-            target="_blank"
-            class="project-btn">
-
-            <i class="fab fa-github"></i>
-            View Project
-
-        </a>
-
-    </div>
-
-</section>
-
-    <!-- CONTACT -->
+    <!-- ================= CONTACT ================= -->
 
     <section id="contact">
 
@@ -258,29 +313,43 @@
         <div class="contact-card">
 
             <p>
+
                 <i class="fa-solid fa-envelope"></i>
+
                 mr.souvik10@gmail.com
+
             </p>
 
             <p>
+
                 <i class="fa-solid fa-phone"></i>
-                +91-6289697623
+
+                +91 6289697623
+
             </p>
 
             <p>
+
                 <i class="fa-solid fa-location-dot"></i>
+
                 Pune, Maharashtra, India
+
             </p>
 
         </div>
 
     </section>
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
-        © 2026 Souvik Roy · Software/Firmware Engineer
+
+        © 2026 Souvik Roy —
+        Software/Firmware Engineer
+
     </footer>
+
+    <!-- ================= SCRIPT ================= -->
 
     <script src="script.js"></script>
 

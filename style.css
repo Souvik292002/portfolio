@@ -73,11 +73,11 @@ nav {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content: center;
 
     align-items: center;
 
-    padding: 22px 10%;
+    padding: 20px 8%;
 
     background: rgba(7,15,31,0.72);
 
@@ -95,22 +95,13 @@ body.light nav {
     border-bottom: 1px solid rgba(15,23,42,0.06);
 }
 
-.logo {
-
-    font-size: 1.3rem;
-
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
 .nav-links {
 
     display: flex;
 
     align-items: center;
 
-    gap: 32px;
+    gap: 42px;
 }
 
 .nav-links a {
@@ -122,6 +113,8 @@ body.light nav {
     color: var(--text);
 
     font-weight: 600;
+
+    font-size: 0.96rem;
 
     transition: 0.3s ease;
 }
@@ -158,6 +151,10 @@ body.light nav {
 
 #theme-toggle {
 
+    position: absolute;
+
+    right: 8%;
+
     width: 50px;
 
     height: 50px;
@@ -173,8 +170,6 @@ body.light nav {
     cursor: pointer;
 
     transition: 0.35s ease;
-
-    flex-shrink: 0;
 }
 
 #theme-toggle:hover {
@@ -447,7 +442,6 @@ section h2 {
 /* ================= PREMIUM GLASS CARDS ================= */
 
 .card,
-.about-card,
 .contact-card,
 .skill-card {
 
@@ -478,7 +472,6 @@ section h2 {
 }
 
 body.light .card,
-body.light .about-card,
 body.light .contact-card,
 body.light .skill-card {
 
@@ -498,7 +491,6 @@ body.light .skill-card {
 
 .card:hover,
 .skill-card:hover,
-.about-card:hover,
 .contact-card:hover {
 
     transform:
@@ -519,7 +511,6 @@ body.light .skill-card {
 
 body.light .card:hover,
 body.light .skill-card:hover,
-body.light .about-card:hover,
 body.light .contact-card:hover {
 
     background:
@@ -789,61 +780,43 @@ footer {
 
 @media(max-width: 768px) {
 
-    /* ===== NAVBAR ===== */
-
     nav {
+
+        justify-content: center;
 
         padding: 16px 5%;
 
-        height: 78px;
-    }
-
-    .logo {
-
-        font-size: 1rem;
-
-        flex-shrink: 0;
+        height: 74px;
     }
 
     .nav-links {
 
-        gap: 14px;
+        gap: 18px;
 
-        overflow-x: auto;
-
-        scrollbar-width: none;
-
-        -ms-overflow-style: none;
-
-        padding-left: 12px;
-    }
-
-    .nav-links::-webkit-scrollbar {
-
-        display: none;
+        flex-wrap: nowrap;
     }
 
     .nav-links a {
 
-        font-size: 0.82rem;
+        font-size: 0.78rem;
 
         white-space: nowrap;
-
-        flex-shrink: 0;
     }
 
     #theme-toggle {
+
+        position: absolute;
+
+        right: 5%;
 
         width: 42px;
 
         height: 42px;
 
         min-width: 42px;
-
-        margin-left: 10px;
     }
 
-    /* ===== HERO ===== */
+    /* ================= HERO ================= */
 
     header {
 
@@ -956,7 +929,7 @@ footer {
         font-size: 1.9rem;
     }
 
-    /* ===== SECTIONS ===== */
+    /* ================= SECTIONS ================= */
 
     section {
 
@@ -970,11 +943,10 @@ footer {
         margin-bottom: 40px;
     }
 
-    /* ===== CARDS ===== */
+    /* ================= CARDS ================= */
 
     .card,
     .skill-card,
-    .about-card,
     .contact-card {
 
         padding: 26px;
@@ -1008,7 +980,7 @@ footer {
         gap: 12px;
     }
 
-    /* ===== SKILLS ===== */
+    /* ================= SKILLS ================= */
 
     .skills-grid {
 
@@ -1027,7 +999,7 @@ footer {
         font-size: 0.98rem;
     }
 
-    /* ===== PROJECT BUTTON ===== */
+    /* ================= PROJECT BUTTON ================= */
 
     .project-btn {
 
@@ -1038,7 +1010,7 @@ footer {
         font-size: 0.95rem;
     }
 
-    /* ===== FOOTER ===== */
+    /* ================= FOOTER ================= */
 
     footer {
 
