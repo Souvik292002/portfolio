@@ -55,6 +55,8 @@ body {
     transition:
         background 0.35s ease,
         color 0.35s ease;
+
+    overflow-x: hidden;
 }
 
 /* ================= NAVBAR ================= */
@@ -171,6 +173,8 @@ body.light nav {
     cursor: pointer;
 
     transition: 0.35s ease;
+
+    flex-shrink: 0;
 }
 
 #theme-toggle:hover {
@@ -303,6 +307,8 @@ body.light .hero-summary {
     display: flex;
 
     gap: 18px;
+
+    flex-wrap: wrap;
 }
 
 .primary-btn,
@@ -528,7 +534,7 @@ body.light .contact-card:hover {
         0 0 0 1px rgba(14,165,233,0.08);
 }
 
-/* ================= CURSOR HOVER GLOW ================= */
+/* ================= CURSOR GLOW ================= */
 
 .card::after,
 .skill-card::after {
@@ -779,52 +785,218 @@ footer {
     }
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE RESPONSIVE ================= */
 
 @media(max-width: 768px) {
 
+    /* ===== NAVBAR ===== */
+
     nav {
 
-        padding: 18px 6%;
+        padding: 16px 5%;
+
+        height: 78px;
+    }
+
+    .logo {
+
+        font-size: 1rem;
+
+        flex-shrink: 0;
     }
 
     .nav-links {
 
-        gap: 16px;
+        gap: 14px;
 
-        font-size: 0.9rem;
+        overflow-x: auto;
+
+        scrollbar-width: none;
+
+        -ms-overflow-style: none;
+
+        padding-left: 12px;
     }
+
+    .nav-links::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    .nav-links a {
+
+        font-size: 0.82rem;
+
+        white-space: nowrap;
+
+        flex-shrink: 0;
+    }
+
+    #theme-toggle {
+
+        width: 42px;
+
+        height: 42px;
+
+        min-width: 42px;
+
+        margin-left: 10px;
+    }
+
+    /* ===== HERO ===== */
 
     header {
 
-        padding: 0 6%;
+        min-height: 100vh;
 
-        background-position: 70% center;
+        padding:
+            120px 7% 80px;
+
+        align-items: flex-start;
+
+        background:
+            linear-gradient(
+                to right,
+                rgba(2,6,23,0.92) 0%,
+                rgba(2,6,23,0.82) 38%,
+                rgba(2,6,23,0.48) 100%
+            ),
+            url('banner.jpg');
+
+        background-size: cover;
+
+        background-position: 72% center;
+    }
+
+    body.light header {
+
+        background:
+            linear-gradient(
+                to right,
+                rgba(255,255,255,0.94) 0%,
+                rgba(255,255,255,0.82) 38%,
+                rgba(255,255,255,0.42) 100%
+            ),
+            url('banner.jpg');
+
+        background-size: cover;
+
+        background-position: 72% center;
+    }
+
+    .hero-text {
+
+        max-width: 100%;
+
+        padding-top: 0;
+    }
+
+    .tag {
+
+        font-size: 0.9rem;
+
+        line-height: 1.8;
+
+        max-width: 260px;
     }
 
     header h1 {
 
-        font-size: 3.2rem;
+        font-size: 3.8rem;
+
+        line-height: 0.98;
+
+        margin-bottom: 12px;
     }
 
     header h2 {
 
-        font-size: 1.35rem;
+        font-size: 1.5rem;
+
+        height: 42px;
+
+        margin-top: 10px;
     }
 
     .hero-summary {
 
+        margin-top: 20px;
+
+        font-size: 1rem;
+
+        line-height: 1.9;
+
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+
+        margin-top: 32px;
+
+        gap: 14px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+
+        padding: 14px 22px;
+
         font-size: 1rem;
     }
 
+    .social-icons {
+
+        margin-top: 34px;
+
+        gap: 20px;
+    }
+
+    .social-icons a {
+
+        font-size: 1.9rem;
+    }
+
+    /* ===== SECTIONS ===== */
+
     section {
 
-        padding: 100px 6%;
+        padding: 90px 7%;
     }
 
     section h2 {
 
-        font-size: 2.3rem;
+        font-size: 2.2rem;
+
+        margin-bottom: 40px;
+    }
+
+    /* ===== CARDS ===== */
+
+    .card,
+    .skill-card,
+    .about-card,
+    .contact-card {
+
+        padding: 26px;
+
+        border-radius: 22px;
+    }
+
+    .card h3 {
+
+        font-size: 1.5rem;
+    }
+
+    .card h4 {
+
+        font-size: 1rem;
+    }
+
+    .card li {
+
+        font-size: 0.96rem;
+
+        line-height: 1.8;
     }
 
     .card-top {
@@ -832,10 +1004,46 @@ footer {
         flex-direction: column;
 
         align-items: flex-start;
+
+        gap: 12px;
     }
 
-    .hero-buttons {
+    /* ===== SKILLS ===== */
 
-        flex-wrap: wrap;
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .skill-card h3 {
+
+        font-size: 1.3rem;
+    }
+
+    .skill-card p {
+
+        font-size: 0.98rem;
+    }
+
+    /* ===== PROJECT BUTTON ===== */
+
+    .project-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+        font-size: 0.95rem;
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer {
+
+        font-size: 0.88rem;
+
+        padding: 30px 7%;
     }
 }
