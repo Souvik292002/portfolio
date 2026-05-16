@@ -231,6 +231,10 @@ body.light header {
 
     max-width: 760px;
 
+    position: relative;
+
+    z-index: 5;
+
     animation: fadeUp 1s ease;
 }
 
@@ -744,43 +748,20 @@ footer {
 
 @media(max-width: 768px) {
 
-    /* ================= NAVBAR ================= */
-
-    nav {
-
-        width: 100%;
-
-        overflow-x: auto;
-
-        -webkit-overflow-scrolling: touch;
-
-        scrollbar-width: none;
-    }
-
-    nav::-webkit-scrollbar {
-        display: none;
-    }
+    /* ===== NAVBAR ===== */
 
     .nav-container {
 
-        padding: 14px 18px;
-
         justify-content: flex-start;
 
-        min-width: max-content;
-
-        gap: 22px;
+        padding: 16px 18px 16px 18px;
     }
 
     .nav-links {
 
-        display: flex;
+        gap: 22px;
 
-        align-items: center;
-
-        gap: 26px;
-
-        padding-right: 72px;
+        padding-right: 90px;
     }
 
     .nav-links a {
@@ -788,57 +769,51 @@ footer {
         font-size: 0.95rem;
 
         white-space: nowrap;
-
-        flex-shrink: 0;
     }
 
     #theme-toggle {
 
         position: fixed;
 
-        top: 16px;
+        top: 14px;
 
         right: 14px;
 
-        width: 52px;
+        width: 54px;
 
-        height: 52px;
-
-        min-width: 52px;
+        height: 54px;
 
         z-index: 1200;
 
-        border-radius: 50%;
-
-        backdrop-filter: blur(14px);
-
         box-shadow:
-            0 8px 25px rgba(0,0,0,0.18);
+            0 8px 25px rgba(0,0,0,0.22);
     }
 
-    /* ================= HERO ================= */
+    /* ===== HERO ===== */
 
     header {
 
         min-height: 100vh;
 
         padding:
-            145px 7% 80px;
+            210px 7% 80px;
 
         align-items: flex-start;
+
+        overflow: hidden;
 
         background:
             linear-gradient(
                 to right,
-                rgba(2,6,23,0.90) 0%,
-                rgba(2,6,23,0.72) 42%,
-                rgba(2,6,23,0.36) 100%
+                rgba(2,6,23,0.94) 0%,
+                rgba(2,6,23,0.82) 42%,
+                rgba(2,6,23,0.42) 100%
             ),
             url('banner.jpg');
 
         background-size: cover;
 
-        background-position: 68% center;
+        background-position: 72% center;
     }
 
     body.light header {
@@ -846,15 +821,15 @@ footer {
         background:
             linear-gradient(
                 to right,
-                rgba(255,255,255,0.92) 0%,
-                rgba(255,255,255,0.76) 42%,
-                rgba(255,255,255,0.36) 100%
+                rgba(255,255,255,0.94) 0%,
+                rgba(255,255,255,0.80) 42%,
+                rgba(255,255,255,0.40) 100%
             ),
             url('banner.jpg');
 
         background-size: cover;
 
-        background-position: 68% center;
+        background-position: 72% center;
     }
 
     .hero-text {
@@ -866,9 +841,9 @@ footer {
 
     .tag {
 
-        font-size: 0.88rem;
+        font-size: 0.9rem;
 
-        line-height: 1.7;
+        line-height: 1.8;
 
         max-width: 260px;
 
@@ -877,20 +852,26 @@ footer {
 
     header h1 {
 
-        font-size: 3.5rem;
+        font-size: 3.2rem;
 
-        line-height: 0.96;
+        line-height: 1.02;
 
-        margin-bottom: 10px;
+        margin-bottom: 12px;
+
+        max-width: 100%;
     }
 
     header h2 {
 
-        font-size: 1.45rem;
+        font-size: 1.28rem;
 
-        height: 42px;
+        line-height: 1.4;
 
-        margin-top: 12px;
+        min-height: 72px;
+
+        margin-top: 14px;
+
+        max-width: 280px;
     }
 
     .hero-summary {
@@ -899,20 +880,20 @@ footer {
 
         font-size: 1rem;
 
-        line-height: 1.95;
+        line-height: 1.9;
 
         max-width: 100%;
+
+        word-break: keep-all;
     }
 
-    /* ================= BUTTONS ================= */
+    /* ===== BUTTONS ===== */
 
     .hero-buttons {
 
         margin-top: 34px;
 
         gap: 14px;
-
-        flex-wrap: wrap;
     }
 
     .primary-btn,
@@ -921,11 +902,9 @@ footer {
         padding: 14px 22px;
 
         font-size: 1rem;
-
-        border-radius: 14px;
     }
 
-    /* ================= SOCIAL ================= */
+    /* ===== SOCIAL ===== */
 
     .social-icons {
 
@@ -939,7 +918,7 @@ footer {
         font-size: 1.8rem;
     }
 
-    /* ================= SECTIONS ================= */
+    /* ===== SECTIONS ===== */
 
     section {
 
@@ -953,7 +932,7 @@ footer {
         margin-bottom: 36px;
     }
 
-    /* ================= CARDS ================= */
+    /* ===== CARDS ===== */
 
     .card,
     .skill-card,
@@ -990,7 +969,7 @@ footer {
         line-height: 1.85;
     }
 
-    /* ================= SKILLS ================= */
+    /* ===== SKILLS ===== */
 
     .skills-grid {
 
@@ -1009,7 +988,7 @@ footer {
         font-size: 0.97rem;
     }
 
-    /* ================= PROJECT BUTTON ================= */
+    /* ===== PROJECT BUTTON ===== */
 
     .project-btn {
 
@@ -1018,7 +997,7 @@ footer {
         justify-content: center;
     }
 
-    /* ================= FOOTER ================= */
+    /* ===== FOOTER ===== */
 
     footer {
 
